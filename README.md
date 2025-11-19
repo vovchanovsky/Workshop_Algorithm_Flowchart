@@ -309,4 +309,28 @@ Write the algorithm and draw the flowchart for a program that inputs the
 purchase amount and gives a **10% discount** if the amount is greater
 than 1000.
 
+### ✔ Pseudocode
+
+```text
+START
+    INPUT purchase_amount
+    discount_percent = 10
+    IF purchase_amount > 1000 THEN
+        purchase_amount -=  purchase_amount * discount_percent / 100
+    ENDIF
+    PRINT pirchase_amount
+END
+```
+
+### ✔ Flowchart
+
+```mermaid
+flowchart TD
+    A([START]) --> B[/INPUT purchase_amount/]
+    B --> C{purchase_amount > 1000 ?}
+    C -->|Yes| D[purchase_amount -= purchase_amount * 10 / 100]
+    C -->|No| E[/PRINT purchase_amount/]
+    D --> E[/PRINT purchase_amount/]
+    E --> G([END])
+```
 ---
