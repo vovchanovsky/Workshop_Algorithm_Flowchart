@@ -58,7 +58,7 @@ marks for 3 subjects, calculates the total and average, and displays
 both.
 
 ### ✔ Pseudocode
-
+```text
 START
     nunber_of_marks = 3
     count = 0, total = 0
@@ -73,16 +73,17 @@ START
     PRINT "Total Marks: " total
     PRINT "Average Marks: " average
 END
+```
 
 ### ✔ Flowchart
 
 ```mermaid
 flowchart TD
-    A([Start]) --> B[count = 0, total = 0, number_of_marks = 3]
-    B --> C{i <  number_of_marks ?
+    A([Start]) --> B[count = 0, total = 0,number_of_marks = 3]
+    B --> C{i <  number_of_marks ?}
     C -->|Yes| D[/Input mark/]
     D --> E[total += mark]
-    E --> F[i += 1]}
+    E --> F[i += 1]
     F --> C
     C -->|No| G[average = total / number_of_marks]
     G --> H[/Print Total and Average/]
