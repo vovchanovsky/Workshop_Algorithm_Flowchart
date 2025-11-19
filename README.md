@@ -63,12 +63,11 @@ START
     nunber_of_marks = 3
     count = 0, total = 0
     REPEAT number_of_marks TIMES
-        DISPLAY "Enter mark #"i+1
+        count += 1
+        DISPLAY "Enter mark #" count
         INPUT mark
         total += mark
-        i += 1
-    ENDREPEAT
-    
+    ENDREPEAT  
     average = total / number_of_marks
     PRINT "Total Marks: " total
     PRINT "Average Marks: " average
@@ -79,16 +78,17 @@ END
 
 ```mermaid
 flowchart TD
-    A([Start]) --> B[count = 0, total = 0,number_of_marks = 3]
-    B --> C{i <  number_of_marks ?}
-    C -->|Yes| D[/INPUT mark/]
-    D --> E[total += mark]
-    E --> F[i += 1]
+    A([START]) --> B[count = 0, total = 0,number_of_marks = 3]
+    B --> C{count <  number_of_marks ?}
+    C -->|Yes| D[count += 1]
+    D --> E[/INPUT mark/]
+    E --> F[total += mark]
     F --> C
     C -->|No| G[average = total / number_of_marks]
-    G --> H[/PRINT Total and Average/]
-    H --> I([End])
+    G --> H[/PRINT total and average/]
+    H --> I([END])
 ```
+
 
 ---
 
@@ -97,6 +97,31 @@ flowchart TD
 Create an algorithm and flowchart that input a number and display its
 multiplication table from 1 to 10 using a loop.
 
+### ✔ Pseudocode
+```text
+START
+    INPUT number
+    count = 1
+    REPEAT 10 TIMES
+        result = number * count 
+        PRINT number "x" count "=" result
+        count += 1
+    ENDREPEAT
+END
+```
+
+```mermaid
+flowchart TD
+    A([START]) --> B[/INPUT number/]
+    B --> C[count = 1]
+    C --> D{count <= 10 ?}
+    D -->|Yes| E[result = number * count]
+    E --> F[/PRINT number "x" count "=" result/]
+    F --> G[count += 1]
+    G --> D
+    D -->|No| H([END])
+
+```
 ---
 
 ## 4. Positive, Negative, or Zero Check
