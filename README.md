@@ -81,12 +81,12 @@ END
 flowchart TD
     A([Start]) --> B[count = 0, total = 0,number_of_marks = 3]
     B --> C{i <  number_of_marks ?}
-    C -->|Yes| D[/Input mark/]
+    C -->|Yes| D[/INPUT mark/]
     D --> E[total += mark]
     E --> F[i += 1]
     F --> C
     C -->|No| G[average = total / number_of_marks]
-    G --> H[/Print Total and Average/]
+    G --> H[/PRINT Total and Average/]
     H --> I([End])
 ```
 
