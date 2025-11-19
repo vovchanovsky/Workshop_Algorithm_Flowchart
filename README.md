@@ -301,6 +301,34 @@ flowchart TD
 Write the algorithm and draw the flowchart that input a number and
 calculate its factorial using a loop.
 
+### ✔ Pseudocode
+
+```text
+START
+    INPUT number
+    count = 0, factorial = 1
+    REPEAT number TIMES
+        count += 1
+        factorial *= count
+    ENDREPEAT
+    PRINT factorial
+END
+```
+
+### ✔ Flowchart
+
+```mermaid
+flowchart TD
+    A([START]) --> B[/INPUT number/]
+    B --> C[count = 0, factorial = 1]
+    C --> D{count < number ?}
+    D -->|Yes| E[count += 1]
+    E --> F[factorial *= count]
+    F --> D
+    D -->|No| G[/PRINT factorial/]
+    G --> H([END])
+```
+
 ---
 
 ## 10. Calculate Discount on Purchase
@@ -328,9 +356,9 @@ END
 flowchart TD
     A([START]) --> B[/INPUT purchase_amount/]
     B --> C{purchase_amount > 1000 ?}
-    C -->|Yes| D[purchase_amount -= purchase_amount * 10 / 100]
-    C -->|No| E[/PRINT purchase_amount/]
+    C -->|Yes| D[purchase_amount -= purchase_amount * discount_percent / 100]
     D --> E[/PRINT purchase_amount/]
+    C -->|No| E[/PRINT purchase_amount/]
     E --> G([END])
 ```
 ---
