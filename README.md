@@ -190,7 +190,7 @@ END
 ```mermaid
 flowchart TD
     A([START]) --> B[/INPUT P, R, T/]
-    B --> C[SI = (P * R * T) / 100]
+    B --> C["SI = (P * R * T) / 100"]
     C --> D[/PRINT SI/]
     D --> E([END])
 ```
