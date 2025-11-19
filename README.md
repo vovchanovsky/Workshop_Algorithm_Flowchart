@@ -8,7 +8,7 @@ For each question in this workshop, you must complete **two** things:
       your repository → link it in this file
     - **Option 2 (optional):** Write a Mermaid flowchart directly in
       Markdown
-    - **Option 3:** Any other valid method
+    - **Option 3 (optional):** Any other valid method
 
 👉 **IMPORTANT:** At the **bottom of each question**, add the
 following sections:
