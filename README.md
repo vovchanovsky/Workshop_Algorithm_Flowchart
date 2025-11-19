@@ -175,12 +175,64 @@ interest using the formula:
 - **R = Rate of Interest** → percentage per year
 - **T = Time** → number of years
 
+### ✔ Pseudocode
+
+```text
+START
+    INPUT P, R, T
+    SI = (P * R * T) / 100
+    PRINT SI
+END
+```
+
+### ✔ Flowchart
+
+```mermaid
+flowchart TD
+    A([START]) --> B[/INPUT P, R, T/]
+    B --> C[SI = (P * R * T) / 100]
+    C --> D[/PRINT SI/]
+    D --> E([END])
+```
+
 ---
 
 ## 6. Average Temperature Calculation
 
 Write the algorithm and draw the flowchart for a program that takes the
 temperature of 7 days, finds the average temperature, and displays it.
+
+### ✔ Pseudocode
+
+```text
+START
+    number_of_days = 7
+    count = 0, total = 0
+    REPEAT number_of_days TIMES
+        count += 1
+        PRINT "Enter temperature for day #" count
+        INPUT temp
+        total += temp
+    ENDREPEAT  
+    average = total / number_of_days
+    PRINT "Average Temperature: " average
+END
+```
+
+### ✔ Flowchart
+
+```mermaid
+flowchart TD
+    A([START]) --> B[count = 0, total = 0,number_of_days = 7]
+    B --> C{count <  number_of_days ?}
+    C -->|Yes| D[count += 1]
+    D --> E[/INPUT temp/]
+    E --> F[total += temp]
+    F --> C
+    C -->|No| G[average = total / number_of_days]
+    G --> H[/PRINT average/]
+    H --> I([END])
+```
 
 ---
 
@@ -189,6 +241,26 @@ temperature of 7 days, finds the average temperature, and displays it.
 Create an algorithm and flowchart to input length and width, calculate
 the area (**Area = Length × Width**), and display the result.
 
+### ✔ Pseudocode
+
+```text
+START
+    INPUT length, width
+    area = length * width
+    PRINT area
+END
+```
+
+### ✔ Flowchart
+
+```mermaid
+flowchart TD
+    A([START]) --> B[/INPUT length, width/]
+    B --> C[area = length * width]
+    C --> D[/PRINT area/]
+    D --> E([END])
+```
+
 ---
 
 ## 8. Determine Pass or Fail
@@ -196,6 +268,31 @@ the area (**Area = Length × Width**), and display the result.
 Write the algorithm and draw the flowchart for a program that takes a
 student's average marks and displays **"Pass"** if average ≥ 50,
 otherwise **"Fail"**.
+
+### ✔ Pseudocode
+
+```text
+START
+    INPUT average_marks
+    IF average_marks >= 50 THEN
+        PRINT "Pass"
+    ELSE
+        PRINT "Fail"
+    ENDIF
+END
+```
+
+### ✔ Flowchart
+
+```mermaid
+flowchart TD
+    A([START]) --> B[/INPUT average_marks/]
+    B --> C{average_marks >= 50 ?}
+    C -->|Yes| D[/PRINT "Pass"/]
+    C -->|No| E[/PRINT "Fail"/]
+    D --> F([END])
+    E --> F([END])
+```
 
 ---
 
