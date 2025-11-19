@@ -58,13 +58,14 @@ marks for 3 subjects, calculates the total and average, and displays
 both.
 
 ### ✔ Pseudocode
+
 ```text
 START
     nunber_of_marks = 3
     count = 0, total = 0
     REPEAT number_of_marks TIMES
         count += 1
-        DISPLAY "Enter mark #" count
+        PRINT "Enter mark #" count
         INPUT mark
         total += mark
     ENDREPEAT  
@@ -89,7 +90,6 @@ flowchart TD
     H --> I([END])
 ```
 
-
 ---
 
 ## 3. Display Multiplication Table
@@ -98,6 +98,7 @@ Create an algorithm and flowchart that input a number and display its
 multiplication table from 1 to 10 using a loop.
 
 ### ✔ Pseudocode
+
 ```text
 START
     INPUT number
@@ -110,6 +111,8 @@ START
 END
 ```
 
+### ✔ Flowchart
+
 ```mermaid
 flowchart TD
     A([START]) --> B[/INPUT number/]
@@ -120,14 +123,44 @@ flowchart TD
     F --> G[count += 1]
     G --> D
     D -->|No| H([END])
-
 ```
+
 ---
 
 ## 4. Positive, Negative, or Zero Check
 
 Write the algorithm and flowchart to input a number and display whether
 it is positive, negative, or zero.
+
+### ✔ Pseudocode
+
+```text
+START
+    INPUT number
+    IF number > 0 THEN
+        PRINT "Positive"
+    ELSE IF number == 0 THEN
+        PRINT "Zero"
+    ELSE
+        PRINT "Negative"
+    ENDIF
+END
+```
+
+### ✔ Flowchart
+
+```mermaid
+flowchart TD
+    A([START]) --> B[/INPUT number/]
+    B --> C{number > 0 ?}
+    C -->|Yes| D[/PRINT "Positive"/]
+    C -->|No| E{number == 0 ?}
+    E -->|Yes| F[/PRINT "Zero"/]
+    E -->|No| G[/PRINT "Negative"/]
+    D --> H([END])
+    F --> H([END])
+    G --> H([END])
+```
 
 ---
 
